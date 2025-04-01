@@ -28,13 +28,13 @@ begin
         Writeln('Start testu...');
 
         ListaBledow := Walidator.WeryfikujScenariuszA(Dokument);
-        Writeln(Format('Scenariusz A znalaz³ %d b³êdów.', [ListaBledow.Count]));
+        Writeln(Format('Scenariusz A znalazl %d bledÃ³w.', [ListaBledow.Count]));
 
         ListaBledow := Walidator.WeryfikujScenariuszB(Dokument, 10);
-        Writeln(Format('Scenariusz B znalaz³ %d b³êdów.', [ListaBledow.Count]));
+        Writeln(Format('Scenariusz B znalazl %d bledÃ³w.', [ListaBledow.Count]));
 
         ListaBledow := Walidator.WeryfikujScenariuszC(Dokument, 10);
-        Writeln(Format('Scenariusz C znalaz³ %d b³êdów.', [ListaBledow.Count]));
+        Writeln(Format('Scenariusz C znalazl %d bledÃ³w.', [ListaBledow.Count]));
 
         Walidator.ZnajdzOptymalnaLiczbeWatkow(Dokument, 32);
 
