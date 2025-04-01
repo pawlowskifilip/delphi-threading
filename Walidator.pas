@@ -57,7 +57,7 @@ begin
   FStartIdx := AStartIdx;
   FEndIdx := AEndIdx;
   FModyfikujDokument := AModyfikujDokument;
-  FreeOnTerminate := False; // Na ko馽u manualnie sami go zwalniamy
+  FreeOnTerminate := False; // Na koncu manualnie sami go zwalniamy
 end;
 
 procedure TWeryfikacjaThread.Execute;
@@ -135,7 +135,7 @@ begin
 
   Stoper.Stop;
 
-  Writeln(Format('Scenariusz A zakonczony w %d ms. Znaleziono %d b砮d體.',
+  Writeln(Format('Scenariusz A zakonczony w %d ms. Znaleziono %d bled贸w.',
     [Stoper.ElapsedMilliseconds, FListaBledow.Count]));
 
   Result := FListaBledow;
@@ -177,7 +177,7 @@ begin
 
   Stoper.Stop;
 
-  Writeln(Format('Scenariusz B (%d w箃k體) zakonczony w %d ms. Znaleziono %d b砮d體.',
+  Writeln(Format('Scenariusz B (%d watkow) zakonczony w %d ms. Znaleziono %d bled贸w.',
     [ALiczbaWatkow, Stoper.ElapsedMilliseconds, FListaBledow.Count]));
 
   Result := FListaBledow;
@@ -219,7 +219,7 @@ begin
 
   Stoper.Stop;
 
-  Writeln(Format('Scenariusz C (%d w箃k體) zakonczony w %d ms. Znaleziono %d b砮d體.',
+  Writeln(Format('Scenariusz C (%d watkow) zakonczony w %d ms. Znaleziono %d bled贸w.',
     [ALiczbaWatkow, Stoper.ElapsedMilliseconds, FListaBledow.Count]));
 
   Result := FListaBledow;
@@ -253,7 +253,7 @@ begin
     Sleep(1000);
   end;
 
-  WriteLn(Format('Najbardziej optymalna liczba w箃k體 dla scenariusza B: %d w箃k體 (Czas egzekucji: %d ms)',
+  WriteLn(Format('Najbardziej optymalna liczba watk贸w dla scenariusza B: %d watkow (Czas egzekucji: %d ms)',
     [NajlepszaIloscWatkow, NajlepszyCzas]));
 end;
 
